@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analiza costurilor de ocupare | 4Biz Properties</title>
+<meta name="description" content="Evaluarea costului total de ocupare și compararea alternativelor disponibile.">
+<meta name="keywords" content="reprezentare chiriași, consultanță imobiliară comercială, strategie de ocupare, negocierea contractelor, relocare operațională">
+<link rel="canonical" href="/servicii/analiza-costurilor-de-ocupare">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="4Biz Properties">
+<meta property="og:title" content="Analiza costurilor de ocupare | 4Biz Properties">
+<meta property="og:description" content="Evaluarea costului total de ocupare și compararea alternativelor disponibile.">
+<meta property="og:url" content="/servicii/analiza-costurilor-de-ocupare">
+<meta property="og:image" content="/work/wp-content/uploads/2026/03/office-buldings-commercial-real-estate-romania-4biz-properties-1.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+*{margin:0}html,body{padding:0}body{margin:0;background:#fff;overflow-x:hidden}
+
+/* ==========================================================================
+   4biz Properties — HEADER  (Oxygen → Header template; paste into Header CSS)
+   Self-contained: brand tokens are redeclared on .fz1h.  Scoped under .fz1h.
+   Transparent over a dark hero → solid on scroll; SOLID by default on pages
+   that have no dark hero (JS adds .is-solid).  Desktop mega-menus + animated
+   hamburger + full-screen mobile menu with expandable submenus.
+   ========================================================================== */
+
+.fz1h *, .fz1h *::before, .fz1h *::after { box-sizing: border-box; }
+
+.fz1h {
+  --navy: #243048;
+  --navy-deep: #19222f;
+  --blue: #4f5d79;
+  --blue-strong: #313f59;
+  --blue-tint: #aab4c5;
+  --white: #fff;
+  --ink: #243048;
+  --muted: #586577;
+  --grey-soft: #f4f6f7;
+  --line: rgba(36, 48, 72, .12);
+  --on-dark-mut: rgba(255, 255, 255, .8);
+  --h: clamp(54px, 6vw, 70px);
+  --gutter: clamp(20px, 5vw, 64px);
+  --radius: 2px;
+  /* uniform decorative stroke — matches the weight of the "i" in the "biz" logo;
+     used by the hamburger lines, eyebrow line, nav-hover underline, EN/Contact
+     fill-bars and the page CTA underlines */
+  --stroke-line: 4px;
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  --font-display: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.fz1h a { text-decoration: none; color: inherit; }
+.fz1h button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+.fz1h :focus-visible { outline: 2px solid currentColor; outline-offset: 4px; border-radius: 2px; }
+.fz1h img { display: block; max-width: 100%; height: auto; }
+.fz1h ul { list-style: none; margin: 0; padding: 0; }
+
+/* readability scrim over a hero image (hidden once solid) */
+.fz1h::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(180deg, rgba(20,28,46,.6), rgba(20,28,46,0));
+  transition: opacity .4s var(--ease);
+}
+
+.fz1h__bar {
+  position: relative; z-index: 1000;   /* keep logo + X above the mobile overlay */
+  display: flex; align-items: center; gap: 24px;
+  /* full-bleed bar so the logo aligns to the page gutter (matches the full-bleed
+     hero headline) instead of sitting indented inside a centred 1320px box */
+  height: var(--h); max-width: none; margin-inline: 0;
+  padding-inline: var(--gutter);
+}
+
+/* ---- Logo (light over hero, dark when solid) ---- */
+.fz1h__logo { display: inline-flex; align-items: center; height: 100%; position: relative; z-index: 2; }
+.fz1h__logo img { height: clamp(40px, 5vw, 54px); width: auto; transition: filter .3s var(--ease); }
+.fz1h .fz1h__logo-dark { display: none; }
+.fz1h__logo-light { filter: brightness(0) invert(1); }
+
+/* ---- Desktop nav ---- */
+.fz1h__nav { margin-left: auto; }
+.fz1h__menu { display: flex; align-items: center; gap: clamp(18px, 2.2vw, 36px); }
+.fz1h__menu > li { position: static; }
+.fz1h__menu > li > a {
+  position: relative; display: inline-flex; align-items: center; gap: 6px; padding: 10px 0;
+  font-family: var(--font-display);
+  font-size: 1.04rem; font-weight: 500; letter-spacing: .005em; color: #fff;
+  transition: color .3s var(--ease);
+}
+.fz1h__menu > li > a::after {
+  content: ""; position: absolute; left: 0; bottom: 0; height: var(--stroke-line); width: 100%;
+  background: currentColor; transform: scaleX(0); transform-origin: right;
+  transition: transform .45s var(--ease-out);
+}
+.fz1h__menu > li > a:hover::after, .fz1h__menu > li > a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+.fz1h__chev { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; transition: transform .4s var(--ease-out); }
+.fz1h__has-mega.is-open > a .fz1h__chev { transform: rotate(180deg); }
+
+/* ---- Mega menu (full-width dropdown) ---- */
+.fz1h__mega {
+  position: fixed; left: 0; right: 0; top: var(--h);
+  background: #fff; color: var(--navy);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 34px 60px -34px rgba(36,48,72,.45);
+  opacity: 0; visibility: hidden; transform: translateY(10px);
+  transition: opacity .35s var(--ease), transform .45s var(--ease-out), visibility .35s var(--ease);
+  z-index: 990;
+}
+.fz1h__mega::before { content: ""; position: absolute; left: 0; right: 0; top: -18px; height: 18px; } /* hover bridge */
+.fz1h__has-mega.is-open .fz1h__mega { opacity: 1; visibility: visible; transform: none; }
+/* gap:0 — the intro's border-right is the first divider, and every column shares
+   the same inner padding, so the intro-to-col-1 gap equals every inter-column gap */
+.fz1h__mega-inner { max-width: 1320px; margin-inline: auto; padding: 40px var(--gutter) 46px; display: flex; gap: 0; align-items: flex-start; }
+
+/* intro column (left) — adds context like the /work/ services section */
+.fz1h__mega-intro { flex: 0 0 clamp(176px, 15.5vw, 224px); border-right: 1px solid var(--line); padding-right: clamp(10px, 1vw, 16px); }
+.fz1h__mega-eyebrow { display: inline-flex; align-items: center; gap: .6em; font-size: .73rem; text-transform: uppercase; letter-spacing: .15em; color: var(--blue); font-weight: 600; margin-bottom: 14px; }
+.fz1h__mega-eyebrow::before { content: ""; width: 22px; height: 1px; background: var(--blue); }
+.fz1h__mega-lead { font-size: 1.04rem; line-height: 1.5; color: var(--navy); margin: 0 0 22px; font-weight: 500; }
+.fz1h__mega-more { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--blue); font-size: .92rem; }
+.fz1h__mega-more::after { content: "\2192"; font-size: 1.05em; line-height: 1; transition: transform .35s var(--ease-out); }
+.fz1h__mega-more:hover::after { transform: translateX(4px); }
+
+/* Servicii mega — text columns split by thin vertical dividers (no boxes) */
+/* 5 even columns; first column gets the SAME inner padding as the others so the
+   gap from the intro divider matches every inter-column gap (no oversized indent) */
+.fz1h__mega-grid { flex: 1; display: grid; grid-template-columns: repeat(5, 1fr); column-gap: 0; row-gap: clamp(22px, 2.4vw, 32px); }
+.fz1h__mega-col { display: flex; flex-direction: column; padding: 0 clamp(10px, 1vw, 16px); }
+.fz1h__mega-col:not(:first-child) { border-left: 1px solid var(--line); }
+.fz1h__mega-cat { font-family: var(--font-display); font-size: .98rem; font-weight: 600; line-height: 1.25; letter-spacing: -.01em; color: var(--navy); margin-bottom: 6px; transition: color .25s var(--ease); }
+.fz1h__mega-cat:hover { color: var(--blue); }
+.fz1h__mega-desc { font-size: .78rem; color: var(--muted); line-height: 1.4; margin: 0 0 12px; }
+.fz1h__mega-col > a:not(.fz1h__mega-cat) { display: inline-flex; align-items: center; gap: 10px; width: fit-content; padding: 5px 0; font-size: .86rem; color: var(--ink); transition: color .25s var(--ease), transform .35s var(--ease-out); }
+.fz1h__mega-ico { width: 18px; height: 18px; flex: none; fill: none; stroke: var(--blue); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; transition: transform .35s var(--ease-out); }
+.fz1h__mega-col > a:not(.fz1h__mega-cat):hover { color: var(--blue); }
+
+/* properties mega — no card outline; thin vertical dividers between columns */
+.fz1h__mega-props { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 0; row-gap: clamp(22px, 2.4vw, 34px); }
+.fz1h__mega-props a { display: flex; flex-direction: column; gap: 4px; padding: 2px clamp(12px, 1.2vw, 18px); transition: color .25s var(--ease); }
+.fz1h__mega-props a:not(:nth-child(3n+1)) { border-left: 1px solid var(--line); }
+.fz1h__mega-props a strong { font-family: var(--font-display); font-size: 1.08rem; font-weight: 600; letter-spacing: -.01em; color: var(--navy); transition: color .25s var(--ease); }
+.fz1h__mega-props a span { font-size: .85rem; color: var(--muted); line-height: 1.4; }
+.fz1h__mega-props a:hover strong { color: var(--blue); }
+
+@media (max-width: 1180px) {
+  .fz1h__mega-grid { grid-template-columns: repeat(3, 1fr); row-gap: clamp(20px, 2vw, 28px); }
+  .fz1h__mega-col:nth-child(3n+1) { border-left: 0; }
+}
+
+/* ---- Actions (lang + CTA + burger) ---- */
+.fz1h__actions { display: flex; align-items: center; gap: 14px; position: relative; z-index: 2; }
+/* .fz1h prefix beats the global ".fz1h a { color: inherit }" so EN stays white */
+/* EN + Contact: a bottom line that fills into a background on hover.
+   ".fz1h" prefix beats the global ".fz1h a{color:inherit}". Default = over hero (white). */
+.fz1h .fz1h__lang, .fz1h .fz1h-btn {
+  position: relative; isolation: isolate;
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 7px 14px 9px; background: transparent; border: 0; border-radius: 0;
+  font-weight: 600; color: #fff;
+  transition: color .3s var(--ease);
+}
+/* EN matches Contact: same serif, same baseline (the EN label is shorter so we
+   only need to equalise font-family/size + use the same padding) */
+.fz1h .fz1h__lang { font-family: var(--font-display); font-size: .98rem; letter-spacing: -.01em; }
+.fz1h .fz1h-btn { font-family: var(--font-display); font-size: .98rem; letter-spacing: -.01em; }
+.fz1h .fz1h__lang::before, .fz1h .fz1h-btn::before {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: var(--stroke-line); z-index: -1;
+  background: #fff; transition: height .3s var(--ease);
+}
+.fz1h .fz1h__lang:hover, .fz1h .fz1h-btn:hover { color: var(--navy-deep); }
+.fz1h .fz1h__lang:hover::before, .fz1h .fz1h-btn:hover::before { height: 100%; }
+
+/* ---- Animated hamburger ---- */
+/* 2-line hamburger — line thickness = --stroke-line ("i" in "biz") */
+.fz1h__burger { display: none; width: 48px; height: 48px; border-radius: var(--radius); align-items: center; justify-content: center; flex-direction: column; gap: 9px; border: 1px solid rgba(255,255,255,.4); transition: border-color .3s var(--ease); }
+.fz1h__burger span { display: block; width: 28px; height: var(--stroke-line); background: #fff; border-radius: 1px; transition: transform .45s var(--ease-out), opacity .3s var(--ease), background .3s var(--ease), width .4s var(--ease-out); }
+.fz1h__burger span:nth-child(2) { display: none; }     /* 2 lines, not 3 */
+.fz1h__burger:hover { border-color: rgba(255,255,255,.7); }
+
+/* ==========================================================================
+   SOLID STATE — when scrolled, when a mega is open, or on non-hero pages
+   ========================================================================== */
+.fz1h.is-solid::before, .fz1h.is-mega-open::before { opacity: 0; }
+/* full-width bar background lives on ::before (NOT on .fz1h__bar) so backdrop-filter
+   doesn't turn the bar into a containing block for the position:fixed mega menu */
+.fz1h.is-solid .fz1h__bar::before, .fz1h.is-mega-open .fz1h__bar::before {
+  content: ""; position: absolute; inset: 0; left: 50%; transform: translateX(-50%); width: 100vw; z-index: -1;
+  background: rgba(255,255,255,.88);
+  -webkit-backdrop-filter: saturate(150%) blur(12px); backdrop-filter: saturate(150%) blur(12px);
+  box-shadow: 0 1px 0 var(--line), 0 16px 40px -34px rgba(36,48,72,.4);
+}
+.fz1h.is-solid .fz1h__logo-light, .fz1h.is-mega-open .fz1h__logo-light { filter: none; }
+.fz1h.is-solid .fz1h__logo-dark, .fz1h.is-mega-open .fz1h__logo-dark { opacity: 1; }
+.fz1h.is-solid .fz1h__menu > li > a, .fz1h.is-mega-open .fz1h__menu > li > a { color: var(--navy); }
+.fz1h.is-solid .fz1h__lang, .fz1h.is-mega-open .fz1h__lang,
+.fz1h.is-solid .fz1h-btn, .fz1h.is-mega-open .fz1h-btn { color: var(--navy); }
+.fz1h.is-solid .fz1h__lang::before, .fz1h.is-mega-open .fz1h__lang::before,
+.fz1h.is-solid .fz1h-btn::before, .fz1h.is-mega-open .fz1h-btn::before { background: var(--navy); }
+.fz1h.is-solid .fz1h__lang:hover, .fz1h.is-mega-open .fz1h__lang:hover,
+.fz1h.is-solid .fz1h-btn:hover, .fz1h.is-mega-open .fz1h-btn:hover { color: #fff; }
+.fz1h.is-solid .fz1h__burger, .fz1h.is-mega-open .fz1h__burger { border-color: var(--line); }
+.fz1h.is-solid .fz1h__burger span, .fz1h.is-mega-open .fz1h__burger span { background: var(--navy); }
+
+/* ==========================================================================
+   MOBILE MENU
+   ========================================================================== */
+/* the menu slides in UNDER the original bar (which stays untouched on top) */
+.fz1h__mobile {
+  position: fixed; top: var(--h); left: 0; right: 0; bottom: 0; z-index: 998; background: var(--navy-deep);
+  display: flex; flex-direction: column; justify-content: flex-start;
+  padding: 28px var(--gutter) 36px; overflow-y: auto;
+  opacity: 0; visibility: hidden; transform: translateY(-18px);
+  transition: opacity .4s var(--ease), transform .5s var(--ease-out), visibility .4s var(--ease);
+}
+.fz1h.is-menu-open .fz1h__mobile { opacity: 1; visibility: visible; transform: none; }
+
+.fz1h__mmenu { position: relative; }
+.fz1h__mmenu > li { border-bottom: 1px solid rgba(255,255,255,.1); }
+.fz1h__mrow { display: flex; align-items: center; overflow: hidden; }
+.fz1h__mrow > a {
+  flex: 1; display: flex; align-items: baseline; gap: 15px; color: #fff;
+  font-family: var(--font-display);
+  padding: clamp(8px, 1.4vw, 12px) 0; font-size: clamp(1.2rem, .95rem + 1.9vw, 1.65rem); font-weight: 600; letter-spacing: -.02em;
+  transform: translateY(110%); opacity: 0;
+  transition: transform .6s var(--ease-out), opacity .5s var(--ease), color .3s var(--ease);
+}
+.fz1h__mrow > a:hover { color: var(--blue-tint); }
+.fz1h.is-menu-open .fz1h__mrow > a { transform: none; opacity: 1; }
+.fz1h.is-menu-open .fz1h__mmenu > li:nth-child(1) .fz1h__mrow > a { transition-delay: .10s; }
+.fz1h.is-menu-open .fz1h__mmenu > li:nth-child(2) .fz1h__mrow > a { transition-delay: .16s; }
+.fz1h.is-menu-open .fz1h__mmenu > li:nth-child(3) .fz1h__mrow > a { transition-delay: .22s; }
+.fz1h.is-menu-open .fz1h__mmenu > li:nth-child(4) .fz1h__mrow > a { transition-delay: .28s; }
+.fz1h.is-menu-open .fz1h__mmenu > li:nth-child(5) .fz1h__mrow > a { transition-delay: .34s; }
+.fz1h.is-menu-open .fz1h__mmenu > li:nth-child(6) .fz1h__mrow > a { transition-delay: .40s; }
+
+/* submenu: link wraps only the text; the rest of the row toggles the submenu */
+.fz1h__mrow > a.fz1h__mlink { flex: 0 0 auto; }
+.fz1h__msub-toggle { flex: 1; align-self: stretch; display: flex; align-items: center; justify-content: flex-end; padding-left: 16px; }
+.fz1h__msub-ico { width: 40px; height: 40px; border: 0; background: transparent; display: grid; place-items: center; color: #fff; transition: color .3s var(--ease); }
+.fz1h__msub-ico svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; transition: transform .45s var(--ease-out); }
+.fz1h__has-sub.is-sub-open .fz1h__msub-ico { color: var(--blue-tint); }
+.fz1h__has-sub.is-sub-open .fz1h__msub-ico svg { transform: rotate(180deg); }
+.fz1h__msub { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s var(--ease-out); }
+.fz1h__msub > div { overflow: hidden; min-height: 0; }
+.fz1h__has-sub.is-sub-open .fz1h__msub { grid-template-rows: 1fr; }
+.fz1h__msub a { display: flex; align-items: center; gap: 12px; padding: 9px 0 9px 36px; font-size: 1.04rem; font-weight: 500; color: var(--on-dark-mut); transition: color .25s var(--ease), padding .3s var(--ease-out); }
+.fz1h__msub a svg { width: 19px; height: 19px; flex: none; fill: none; stroke: var(--blue-tint); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; transition: stroke .25s var(--ease); }
+.fz1h__msub a:last-child { padding-bottom: 16px; }
+.fz1h__msub a:hover { color: #fff; padding-left: 44px; }
+.fz1h__msub a:hover svg { stroke: #fff; }
+
+.fz1h__mfoot { margin-top: auto; padding-top: clamp(26px, 5vw, 44px); display: flex; flex-wrap: wrap; align-items: center; gap: 16px; opacity: 0; transform: translateY(16px); transition: opacity .5s var(--ease) .4s, transform .5s var(--ease-out) .4s; }
+.fz1h.is-menu-open .fz1h__mfoot { opacity: 1; transform: none; }
+.fz1h .fz1h__mfoot .fz1h__lang, .fz1h .fz1h__mfoot .fz1h-btn { color: #fff; }
+.fz1h .fz1h__mfoot .fz1h__lang::before, .fz1h .fz1h__mfoot .fz1h-btn::before { background: #fff; }
+.fz1h .fz1h__mfoot .fz1h__lang:hover, .fz1h .fz1h__mfoot .fz1h-btn:hover { color: var(--navy-deep); }
+.fz1h__mfoot-contact { color: var(--on-dark-mut); font-size: .9rem; margin-left: auto; }
+.fz1h__mfoot-contact a { font-weight: 600; color: #fff; }
+
+/* open menu: morph the hamburger to X, and give the bar the menu's own dark
+   background so the logo + X sit on navy-deep (not transparent over the page) */
+/* 2-line X — translate by half the line+gap distance so the two lines cross */
+.fz1h.is-menu-open .fz1h__burger span:nth-child(1) { transform: translateY(calc((var(--stroke-line) + 9px) / 2)) rotate(45deg); }
+.fz1h.is-menu-open .fz1h__burger span:nth-child(3) { transform: translateY(calc((var(--stroke-line) + 9px) / -2)) rotate(-45deg); }
+.fz1h.is-menu-open .fz1h__bar::before {
+  content: ""; position: absolute; inset: 0; left: 50%; transform: translateX(-50%); width: 100vw; z-index: -1;
+  background: var(--navy-deep); -webkit-backdrop-filter: none; backdrop-filter: none; box-shadow: none;
+}
+.fz1h.is-menu-open .fz1h__logo-light { filter: brightness(0) invert(1); }
+.fz1h.is-menu-open .fz1h__logo-dark { opacity: 0; }
+.fz1h.is-menu-open .fz1h__burger { border-color: rgba(255,255,255,.4); }
+.fz1h.is-menu-open .fz1h__burger span { background: #fff; }
+/* footer of the menu sits on the navy panel, so keep it light */
+.fz1h.is-menu-open .fz1h__mfoot .fz1h__lang, .fz1h.is-menu-open .fz1h__mfoot .fz1h-btn { color: #fff; }
+.fz1h.is-menu-open .fz1h__mfoot .fz1h__lang::before, .fz1h.is-menu-open .fz1h__mfoot .fz1h-btn::before { background: #fff; }
+.fz1h.is-menu-open .fz1h__mfoot .fz1h__lang:hover, .fz1h.is-menu-open .fz1h__mfoot .fz1h-btn:hover { color: var(--navy-deep); }
+
+body.fz1h-lock { overflow: hidden; }
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 991px) {
+  .fz1h__nav, .fz1h__actions .fz1h__lang, .fz1h__actions .fz1h__cta { display: none; }
+  .fz1h__bar { padding-inline: 14px; }
+  .fz1h__burger { display: flex; }
+  .fz1h__actions { margin-left: auto; }
+}
+@media (min-width: 992px) { .fz1h__mobile { display: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .fz1h *, .fz1h *::before, .fz1h *::after { transition-duration: .12s !important; }
+  .fz1h__mrow > a { transition-delay: 0s !important; }
+}
+
+/* ==========================================================================
+   4biz Properties — Home page styles  (Oxygen → Page CSS)
+   ----------------------------------------------------------------------------
+   Editorial system: navy brand, IBM Plex Serif display headings, generous
+   whitespace, NO icons, restrained motion. Everything namespaced under .fz1
+   so it never collides with the theme.
+   ----------------------------------------------------------------------------
+   FONT: display headings use "IBM Plex Serif" (loaded via the Google Fonts
+   <link> in the page <head>). Falls back to Georgia → serif.
+   ========================================================================== */
+
+html { scroll-behavior: smooth; }
+
+.fz1 *,
+.fz1 *::before,
+.fz1 *::after { box-sizing: border-box; }
+
+.fz1 {
+  /* ---- Navy brand: one blue + two intensities ---- */
+  --navy:        #243048;
+  --navy-deep:   #19222f;
+  --blue:        #4f5d79;
+  --blue-strong: #313f59;
+  --blue-tint:   #aab4c5;
+
+  --grey-cool:   #e6eaed;
+  --grey-soft:   #f5f6f7;
+  --white:       #ffffff;
+  --ink:         #243048;
+  --muted:       #586577;
+  --line:        rgba(36, 48, 72, .14);
+  --line-strong: rgba(36, 48, 72, .24);
+  --on-dark-mut: rgba(255, 255, 255, .74);
+  --on-dark-line: rgba(255, 255, 255, .16);
+
+  /* IBM Plex Serif — loaded via Google Fonts <link> in <head> */
+  --font-display: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --container: 1240px;
+  --gutter: clamp(20px, 5vw, 64px);
+  --section-y: clamp(60px, 8vw, 116px);
+  --radius: 2px;
+  --stroke-line: 4px;                /* same as the .fz1h scope above */
+  --ease: cubic-bezier(.4, 0, .2, 1);
+
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.6;
+  letter-spacing: -.012em;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background: var(--white);
+}
+
+.fz1 img { max-width: 100%; height: auto; display: block; }
+.fz1 a { color: inherit; text-decoration: none; }
+.fz1 button { font: inherit; color: inherit; cursor: pointer; }
+.fz1 ul { list-style: none; margin: 0; padding: 0; }
+.fz1 :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
+
+/* ---- Layout ---- */
+.fz1-container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+.fz1-section { padding-block: var(--section-y); position: relative; }
+.fz1-section--tight { padding-block: clamp(48px, 6vw, 86px); }
+.fz1-section--dark { background: var(--navy-deep); color: #fff; }
+.fz1-section--soft { background: var(--grey-soft); }
+.fz1-defer { }
+
+/* ---- Type ---- */
+.fz1-eyebrow {
+  display: inline-flex; align-items: center; gap: .85em;
+  font-family: var(--font-sans);
+  font-size: .74rem; font-weight: 600; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--blue); margin: 0 0 16px;
+}
+.fz1-eyebrow::before { content: ""; flex: none; width: 40px; height: var(--stroke-line); background: currentColor; transition: width .45s var(--ease); }
+/* hover (desktop): the line grows and pushes the label to the right */
+.fz1-eyebrow:hover::before { width: 100px; }
+.fz1-section--dark .fz1-eyebrow { color: var(--blue-tint); }
+
+.fz1-h2 {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(1.9rem, 1.1rem + 2.5vw, 3rem); line-height: 1.06;
+  letter-spacing: .005em; margin: 0 0 .42em; max-width: 20ch; color: inherit;
+  text-wrap: balance;
+}
+.fz1-h2--wide { max-width: 28ch; }
+.fz1-lead { font-size: clamp(1.02rem, .96rem + .4vw, 1.2rem); color: var(--muted); margin: 0; max-width: 62ch; }
+.fz1-section--dark .fz1-lead { color: var(--on-dark-mut); }
+
+/* large editorial intro statement (the page manifesto / "(H1)" block) */
+.fz1-statement { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.32rem, 1rem + 1.45vw, 2.05rem); line-height: 1.3; letter-spacing: -.012em; color: var(--navy); margin: 0; max-width: 34ch; text-wrap: balance; }
+.fz1-intro__grid { display: grid; gap: clamp(20px, 4vw, 56px); grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 900px) { .fz1-intro__grid { grid-template-columns: 1.35fr 1fr; gap: clamp(40px, 5vw, 80px); } }
+.fz1-intro__aside { color: var(--muted); font-size: clamp(1rem, .96rem + .25vw, 1.12rem); line-height: 1.6; max-width: 46ch; }
+@media (min-width: 900px) { .fz1-intro__aside { padding-top: 8px; } }
+
+.fz1-section__head { max-width: 820px; margin-bottom: clamp(34px, 5vw, 60px); }
+.fz1-section__head--split { max-width: none; display: grid; gap: 18px; grid-template-columns: 1fr; align-items: end; }
+@media (min-width: 900px) {
+  .fz1-section__head--split { grid-template-columns: 1.5fr 1fr; gap: 48px; }
+  .fz1-section__head--split .fz1-section__aside { text-align: right; }
+}
+
+/* ---- Buttons: a bottom line that grows into a filled background on hover ---- */
+.fz1-btn {
+  position: relative; isolation: isolate;
+  display: inline-flex; align-items: center; gap: .5em;
+  padding: 9px 18px 11px; background: transparent; border: 0; border-radius: 0;
+  font-family: var(--font-display); font-size: 1rem; font-weight: 600; letter-spacing: -.02em;
+  transition: color .3s var(--ease);
+}
+.fz1-btn::before {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: var(--stroke-line); z-index: -1;
+  background: var(--navy); transition: height .35s var(--ease);
+}
+.fz1-btn:hover::before, .fz1-btn:focus-visible::before { height: 100%; }
+/* colours (".fz1 .fz1-btn" beats the global ".fz1 a{color:inherit}") */
+.fz1 .fz1-btn, .fz1 .fz1-btn--ghost { color: var(--navy); }
+.fz1 .fz1-btn:hover, .fz1 .fz1-btn:focus-visible,
+.fz1 .fz1-btn--ghost:hover, .fz1 .fz1-btn--ghost:focus-visible { color: #fff; }
+.fz1 .fz1-btn--light { color: #fff; }
+.fz1 .fz1-btn--light::before { background: #fff; }
+.fz1 .fz1-btn--light:hover, .fz1 .fz1-btn--light:focus-visible { color: var(--navy); }
+.fz1 .fz1-btn--on-dark { color: #fff; }
+.fz1 .fz1-btn--on-dark::before { background: rgba(255,255,255,.5); }
+.fz1 .fz1-btn--on-dark:hover::before, .fz1 .fz1-btn--on-dark:focus-visible::before { background: #fff; }
+.fz1 .fz1-btn--on-dark:hover, .fz1 .fz1-btn--on-dark:focus-visible { color: var(--navy); }
+
+/* ---- Text link with simple arrow glyph (no icon assets) ---- */
+.fz1-link {
+  display: inline-flex; align-items: center; gap: .45em;
+  font-family: var(--font-sans); font-weight: 600; font-size: .95rem; color: var(--blue);
+  transition: color .25s var(--ease);
+}
+.fz1-link::after { content: "\2192"; font-size: 1.1em; line-height: 1; transition: transform .25s var(--ease); }
+.fz1-link:hover { color: var(--blue-strong); }
+.fz1-link:hover::after { transform: translateX(3px); }
+.fz1 a.fz1-link { color: var(--blue); }
+.fz1-section--dark .fz1-link, .fz1-section--dark a.fz1-link { color: #fff; }
+
+/* ==========================================================================
+   HERO — split slider: ~3/4 image + text panel on a solid (navy) background.
+   A duration bar fills along the hero's bottom edge; the arrows + count live in
+   a box that straddles the seam between the hero and the next section.
+   ========================================================================== */
+.fz1-hero { position: relative; z-index: 3; background: var(--navy-deep); color: #fff; isolation: isolate; }
+.fz1-hero__viewport { overflow: hidden; }
+.fz1-hero__track { display: flex; transition: transform .7s var(--ease); }
+.fz1-hero__slide { position: relative; flex: 0 0 100%; width: 100%; display: grid; grid-template-columns: 1fr; isolation: isolate; }
+
+/* image cell — top on mobile, right (~2/3) on desktop */
+/* mobile/narrow (≈440–880px, e.g. Z Flip): the image fills the FULL width with a
+   LOCKED height + object-fit:cover. No aspect-ratio — that combined with max-height
+   was shrinking the width and leaving a navy gap on the right. */
+.fz1-hero__media { position: relative; order: 1; width: 100%; height: clamp(280px, 50vh, 440px); overflow: hidden; }
+.fz1-hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.fz1-hero__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,28,46,.08), rgba(20,28,46,.30)); }
+
+/* text panel on a different (solid navy) background */
+.fz1-hero__inner {
+  order: 2; max-width: none; margin: 0; background: var(--navy-deep);
+  display: flex; flex-direction: column; justify-content: flex-start;
+  /* tighter vertical padding on stacked/narrow layout so the text + CTA stay
+     visible on short screens (≈440–880px, e.g. a Z Flip) */
+  padding: clamp(20px, 4vw, 32px) var(--gutter) clamp(24px, 4.2vw, 38px);
+}
+@media (min-width: 880px) {
+  .fz1-hero__slide { grid-template-columns: minmax(320px, 33%) 1fr; }
+  .fz1-hero__media { order: 2; height: auto; min-height: min(82vh, 720px); }
+  .fz1-hero__inner { order: 1; justify-content: center; padding: clamp(120px, 18vh, 172px) clamp(34px, 3vw, 54px) clamp(82px, 12vh, 116px); }
+}
+.fz1-hero__content { max-width: 520px; width: 100%; }
+.fz1-hero__title {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(2rem, 1.2rem + 2.2vw, 3.1rem); line-height: 1.02;
+  letter-spacing: 0; margin: 0 0 18px; text-wrap: balance;
+}
+.fz1-hero__text { font-size: clamp(1rem, .95rem + .3vw, 1.12rem); color: rgba(255,255,255,.82); margin: 0; max-width: 46ch; letter-spacing: -.011em; }
+.fz1-hero__cta { display: flex; flex-wrap: wrap; gap: 16px 32px; margin-top: 30px; }
+
+/* hero CTA — a leading line that slides into a trailing arrow on hover */
+.fz1 .fz1-herolink { display: inline-flex; align-items: center; color: #fff; font-family: var(--font-sans); font-weight: 600; font-size: .98rem; letter-spacing: -.01em; padding: 6px 0; }
+.fz1-herolink::before { content: ""; flex: none; width: 36px; height: var(--stroke-line); background: var(--blue-tint); margin-right: 16px; transition: width .42s var(--ease), margin-right .42s var(--ease), opacity .3s var(--ease); }
+.fz1-herolink::after { content: "\27F6"; flex: none; max-width: 0; margin-left: 0; overflow: hidden; opacity: 0; color: var(--blue-tint); font-size: 1.3em; line-height: 1; transition: max-width .42s var(--ease), margin-left .42s var(--ease), opacity .3s var(--ease); }
+.fz1-herolink:hover::before, .fz1-herolink:focus-visible::before { width: 0; margin-right: 0; opacity: 0; }
+.fz1-herolink:hover::after, .fz1-herolink:focus-visible::after { max-width: 48px; margin-left: 16px; opacity: 1; }
+
+/* two-tone hero title: lead phrase stays white, the rest is dimmed a touch */
+.fz1-hero__title-dim { color: rgba(255,255,255,.6); }
+/* two-tone lead paragraph: the follow-up sentence is a touch lighter */
+.fz1-lead-soft { color: #8c96a4; }
+
+/* duration bar — JS drives scaleX 0→1 over the autoplay duration. Driven from
+   JS (not a CSS animation) so it stays visible even under prefers-reduced-motion,
+   because the owner explicitly wants the timer shown. */
+.fz1-hero__progress { position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: rgba(255,255,255,.16); z-index: 4; pointer-events: none; }
+.fz1-hero__progress span { display: block; height: 100%; width: 100%; background: #fff; transform: scaleX(0); transform-origin: left; will-change: transform; }
+
+/* arrows + count box on the LEFT, straddling the hero / next-section seam */
+.fz1-hero__controls {
+  position: absolute; left: var(--gutter); bottom: 0; transform: translateY(50%); z-index: 6;
+  display: flex; align-items: center; gap: 12px;
+  background: var(--navy-deep); border: 1px solid rgba(255,255,255,.14); border-radius: var(--radius);
+  padding: 7px 9px; box-shadow: 0 22px 44px -26px rgba(8,13,26,.75);
+}
+.fz1-hero__arrow { width: 46px; height: 46px; border-radius: var(--radius); border: 0; background: transparent; color: #fff; display: grid; place-items: center; font-size: 1.25rem; line-height: 1; transition: background .25s var(--ease); }
+.fz1-hero__arrow:hover { background: rgba(255,255,255,.14); }
+.fz1-hero__count { pointer-events: none; font-variant-numeric: tabular-nums; font-weight: 600; font-size: .86rem; letter-spacing: .1em; color: rgba(255,255,255,.66); min-width: 50px; text-align: center; }
+.fz1-hero__count b { color: #fff; }
+
+/* ==========================================================================
+   OPPORTUNITIES & TRANSACTIONS — merged editorial card slider (dark)
+   Combines the old "Nevoile tale" + "Oportunități & Tranzacții" sections into
+   one draggable card slider styled after the reference layout.
+   ========================================================================== */
+.fz1-opps { scroll-margin-top: clamp(58px, 7vw, 76px); padding-bottom: 0; }
+.fz1-anchor { position: absolute; top: calc(-1 * clamp(58px, 7vw, 76px)); }
+.fz1-opps__head { max-width: 640px; margin-bottom: clamp(34px, 5vw, 60px); }
+.fz1-opps__head .fz1-h2 { max-width: 20ch; margin-bottom: 0; }
+
+.fz1-opps__slider { position: relative; }
+.fz1-opps__viewport { overflow: hidden; }
+.fz1-opps__track {
+  display: flex; gap: clamp(16px, 1.6vw, 24px);
+  transition: transform .6s var(--ease);
+  cursor: grab; touch-action: pan-y; user-select: none;
+}
+.fz1-opps__track.is-grabbing { cursor: grabbing; transition: none; }
+.fz1-opps__card {
+  flex: 0 0 calc((100% - 2 * clamp(16px, 1.6vw, 24px)) / 3);
+  display: flex; flex-direction: column;
+  padding: clamp(26px, 2.3vw, 38px) clamp(22px, 1.9vw, 32px);
+  border: 1px solid var(--on-dark-line); border-radius: var(--radius);
+  background: rgba(255,255,255,.018); min-height: 312px;
+  transition: border-color .3s var(--ease), background .3s var(--ease);
+}
+.fz1-opps__card:hover { border-color: rgba(255,255,255,.34); background: rgba(255,255,255,.04); }
+.fz1-opps__num { display: block; margin-bottom: 22px; color: #fff; line-height: 1; font-family: var(--font-display); }
+.fz1-opps__num b { font-style: italic; font-weight: 500; font-size: 2.5rem; letter-spacing: -.02em; }
+.fz1-opps__num i { font-style: italic; font-weight: 400; font-size: 1rem; color: var(--blue-tint); margin-left: 3px; }
+.fz1-opps__t { font-family: var(--font-display); font-weight: 600; font-size: 1.26rem; line-height: 1.2; letter-spacing: -.02em; margin: 0 0 14px; color: #fff; }
+.fz1-opps__d { font-size: .98rem; line-height: 1.58; color: var(--on-dark-mut); margin: 0 0 26px; }
+
+/* services ticker — a band of services split by "|", scrolling continuously / infinitely.
+   The animation gets higher specificity + !important so it survives the global
+   reduce-motion "animation:none" rule (owner wants the band always moving). */
+.fz1-opps__ticker { margin-top: clamp(40px, 5vw, 66px); overflow: hidden; }
+.fz1-opps__ticker-track { display: flex; width: max-content; will-change: transform; }
+.fz1-opps .fz1-opps__ticker-track { animation: fz1-opps-tick 45s linear infinite !important; }
+.fz1-opps__tick-group { display: flex; align-items: center; flex: none; }
+.fz1-opps__tick-item { display: inline-flex; align-items: center; white-space: nowrap; padding: 16px clamp(20px, 2.2vw, 38px); font-family: var(--font-sans); font-weight: 400; font-size: clamp(1.02rem, .96rem + .4vw, 1.2rem); letter-spacing: -.012em; color: var(--on-dark-mut); }
+@keyframes fz1-opps-tick { to { transform: translateX(-50%); } }
+.fz1-opps__link { margin-top: auto; display: inline-flex; align-items: center; gap: .5em; font-weight: 600; font-size: .92rem; color: #fff; }
+.fz1-opps__link span { transition: transform .3s var(--ease); }
+.fz1-opps__link:hover span { transform: translate(2px, -2px); }
+
+.fz1-opps__controls { display: flex; align-items: center; gap: clamp(18px, 2.4vw, 30px); margin-top: clamp(34px, 4vw, 54px); }
+.fz1-opps__nav { display: flex; gap: 12px; }
+.fz1-opps__arrow {
+  width: 38px; height: 46px; border: 0; border-radius: 0; background: transparent; color: #fff;
+  display: grid; place-items: center; font-size: 1.5rem; line-height: 1;
+  transition: color .25s var(--ease), opacity .25s var(--ease);
+}
+.fz1-opps__arrow:hover { color: var(--blue-tint); }
+.fz1-opps__arrow[disabled] { opacity: .28; cursor: default; }
+.fz1-opps__count { font-variant-numeric: tabular-nums; font-weight: 600; font-size: .92rem; letter-spacing: .08em; color: var(--on-dark-mut); white-space: nowrap; }
+.fz1-opps__count b { color: #fff; }
+.fz1-opps__progress { position: relative; flex: 1; height: 1px; background: rgba(255,255,255,.2); }
+.fz1-opps__progress span { position: absolute; left: 0; top: 0; height: 100%; background: #fff; width: 33%; transition: width .5s var(--ease); }
+
+@media (max-width: 880px) {
+  .fz1-opps__card { flex-basis: calc((100% - clamp(16px, 1.6vw, 24px)) / 2); min-height: 290px; }
+}
+@media (max-width: 560px) {
+  .fz1-opps__card { flex-basis: 84%; min-height: 264px; }
+  .fz1-opps__progress { display: none; }
+}
+
+/* ==========================================================================
+   NATIONAL DYNAMICS + county map  (kept as-is — owner likes this section)
+   ========================================================================== */
+.fz1-market { display: grid; gap: clamp(30px, 5vw, 64px); align-items: center; grid-template-columns: 1fr; }
+@media (min-width: 940px) { .fz1-market { grid-template-columns: .95fr 1.05fr; } }
+.fz1-market__text .fz1-h2 { max-width: 22ch; }
+
+.fz1-map__media { width: 95vw; max-width: 720px; margin-inline: auto; }
+@media (min-width: 940px) { .fz1-map__media { width: 100%; max-width: none; margin: 0; } }
+.fz1-map__svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fz1-map__county { fill: var(--grey-cool); stroke: #fff; stroke-width: 1; transition: fill .45s var(--ease); }
+.fz1-map__county.is-active { fill: #c6cedb; }
+.fz1-map__county:hover { fill: var(--blue-tint); }
+.fz1-map__clabel { fill: var(--blue-strong); font-family: var(--font-sans); font-size: 11px; font-weight: 500; text-anchor: middle; pointer-events: none; }
+.fz1-map__pins { pointer-events: none; }
+.fz1-map__pindot { fill: var(--navy); }
+.fz1-map__pinring { fill: none; stroke: var(--navy); stroke-width: 2; transform-box: fill-box; transform-origin: center; animation: fz1-pulse 2.6s var(--ease) infinite; }
+@keyframes fz1-pulse { 0% { transform: scale(1); opacity: .5; } 70%, 100% { transform: scale(2.6); opacity: 0; } }
+.fz1-map__plabel { fill: var(--navy); font-family: var(--font-sans); font-size: 15px; font-weight: 600; paint-order: stroke; stroke: #fff; stroke-width: 3px; stroke-linejoin: round; }
+
+/* ==========================================================================
+   NEEDS — "start with what you need" entry points (text only, no icons)
+   ========================================================================== */
+.fz1-needs { border-top: 1px solid var(--line); }
+.fz1-need {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: start;
+  column-gap: clamp(16px, 2vw, 30px); row-gap: 6px;
+  padding: clamp(22px, 3vw, 30px) 6px; border-bottom: 1px solid var(--line);
+  transition: background .25s var(--ease), padding-left .3s var(--ease);
+}
+.fz1-need:hover { background: rgba(36,48,72,.03); padding-left: 16px; }
+.fz1-need__idx { grid-column: 1; grid-row: 1; font-size: .8rem; font-weight: 600; color: var(--blue); font-variant-numeric: tabular-nums; padding-top: .5em; }
+.fz1-need__t { grid-column: 2; grid-row: 1; min-width: 0; font-family: var(--font-display); font-weight: 500; font-size: clamp(1.25rem, 1rem + 1vw, 1.7rem); line-height: 1.16; letter-spacing: -.01em; }
+.fz1-need__arrow { grid-column: 3; grid-row: 1 / span 2; align-self: center; color: var(--blue); font-size: 1.4rem; line-height: 1; transition: transform .25s var(--ease); }
+.fz1-need:hover .fz1-need__arrow { transform: translateX(4px); }
+.fz1-need__d { grid-column: 2; grid-row: 2; min-width: 0; color: var(--muted); font-size: .98rem; max-width: 60ch; }
+
+/* ==========================================================================
+   SERVICES — full taxonomy (the "leaves"), listed in the dark section
+   ========================================================================== */
+.fz1-svc { display: grid; gap: clamp(34px, 4vw, 52px) clamp(28px, 3vw, 48px); grid-template-columns: 1fr; }
+@media (min-width: 680px) { .fz1-svc { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1040px) { .fz1-svc { grid-template-columns: repeat(4, 1fr); } }
+.fz1-svc__group { border-top: 1px solid var(--on-dark-line); padding-top: 22px; }
+.fz1-svc__cat { font-family: var(--font-display); font-weight: 600; font-size: 1.28rem; line-height: 1.2; letter-spacing: -.01em; margin: 0 0 10px; color: #fff; }
+.fz1-svc__desc { color: var(--on-dark-mut); font-size: .92rem; line-height: 1.5; margin: 0 0 18px; }
+.fz1-svc__leaves li { border-top: 1px solid var(--on-dark-line); }
+.fz1-svc__leaves li:first-child { border-top: 0; }
+.fz1-svc__leaves a { display: block; padding: 11px 0; color: rgba(255,255,255,.9); font-size: .98rem; font-weight: 500; transition: color .25s var(--ease), padding-left .3s var(--ease); }
+.fz1-svc__leaves a:hover { color: #fff; padding-left: 8px; }
+
+/* ==========================================================================
+   PROPERTY TYPES — compact, text only (no images)
+   ========================================================================== */
+/* clean divided list — thin lines between rows, no card outline */
+.fz1-ptypes { border-top: 1px solid var(--line); }
+.fz1-ptype {
+  display: grid; grid-template-columns: 1fr; gap: 8px 28px; align-items: baseline;
+  padding: clamp(18px, 2.2vw, 27px) 2px; border-bottom: 1px solid var(--line);
+  transition: padding-left .3s var(--ease);
+}
+@media (min-width: 760px) { .fz1-ptype { grid-template-columns: 2.1fr 3fr; } }
+.fz1-ptype__top { display: flex; align-items: baseline; gap: 14px; }
+.fz1-ptype__name { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.18rem, 1rem + .7vw, 1.5rem); letter-spacing: -.03em; transition: color .25s var(--ease); }
+.fz1-ptype__d { margin: 0; color: var(--muted); font-size: .94rem; line-height: 1.5; }
+.fz1-ptype:hover { padding-left: 10px; }
+.fz1-ptype:hover .fz1-ptype__name { color: var(--blue); }
+
+/* ==========================================================================
+   NEWS — static card grid (no slider / drag)
+   ========================================================================== */
+/* Hines-style: one featured article + two secondary, divided by thin lines,
+   no card outlines, serif headlines, arrow square in the image corner */
+.fz1-news .fz1-eyebrow { margin-bottom: clamp(4px, 1vw, 12px); }
+.fz1 .fz1-news__art { color: var(--navy); }
+.fz1-news__art { display: grid; gap: clamp(16px, 2.4vw, 34px); align-items: center; padding: clamp(22px, 2.8vw, 38px) 0; border-top: 1px solid var(--line); }
+.fz1-news__art--feat { grid-template-columns: 1fr; }
+@media (min-width: 820px) { .fz1-news__art--feat { grid-template-columns: 1fr 1.06fr; gap: clamp(30px, 4vw, 56px); } }
+.fz1-news__art:not(.fz1-news__art--feat) { grid-template-columns: 1fr auto; gap: 18px; }
+.fz1-news__text { min-width: 0; }
+.fz1-news__h { font-family: var(--font-display); font-weight: 600; letter-spacing: -.03em; line-height: 1.12; margin: 0; color: var(--navy); transition: color .25s var(--ease); font-size: clamp(1.1rem, .98rem + .5vw, 1.3rem); }
+.fz1-news__art--feat .fz1-news__h { font-size: clamp(1.5rem, 1rem + 2.2vw, 2.5rem); line-height: 1.06; }
+.fz1-news__date { display: block; margin-top: 18px; font-size: .82rem; color: var(--muted); letter-spacing: .01em; }
+.fz1-news__art--feat .fz1-news__date { margin-top: clamp(26px, 5vw, 66px); }
+.fz1-news__media { position: relative; overflow: hidden; aspect-ratio: 16 / 10; }
+.fz1-news__art:not(.fz1-news__art--feat) .fz1-news__media { width: clamp(116px, 18vw, 188px); aspect-ratio: 16 / 12; }
+.fz1-news__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.fz1-news__go { position: absolute; right: 0; bottom: 0; width: 44px; height: 44px; background: var(--navy); color: #fff; display: grid; place-items: center; font-size: 1.05rem; transition: background .25s var(--ease); }
+.fz1-news__art:hover .fz1-news__h { color: var(--blue); }
+.fz1-news__art:hover .fz1-news__media img { transform: scale(1.045); }
+.fz1-news__art:hover .fz1-news__go { background: var(--blue); }
+.fz1-news__row { display: grid; grid-template-columns: 1fr; }
+@media (min-width: 820px) { .fz1-news__row { grid-template-columns: 1fr 1fr; gap: clamp(26px, 3.6vw, 58px); } }
+.fz1-news__foot { display: flex; justify-content: flex-end; margin-top: clamp(6px, 1.2vw, 14px); padding-top: clamp(22px, 2.6vw, 32px); border-top: 1px solid var(--line); }
+
+/* ==========================================================================
+   CAREERS — "Join us" band (CBRE-style)
+   ========================================================================== */
+.fz1-careers { background: var(--navy-deep); color: #fff; overflow: hidden; isolation: isolate; }
+.fz1-careers__bg { position: absolute; inset: 0; z-index: -2; }
+.fz1-careers__bg img { width: 100%; height: 100%; object-fit: cover; opacity: .28; }
+.fz1-careers::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(25,34,47,.92), rgba(25,34,47,.62)); }
+.fz1-careers__inner { display: grid; gap: 28px; grid-template-columns: 1fr; align-items: center; }
+@media (min-width: 880px) { .fz1-careers__inner { grid-template-columns: 1.4fr auto; gap: 48px; } }
+.fz1-careers .fz1-h2 { margin-bottom: .3em; }
+/* careers sits on a dark navy image — keep text to white + one light grey only */
+.fz1-careers .fz1-eyebrow, .fz1-careers .fz1-lead { color: var(--on-dark-mut); }
+
+/* ==========================================================================
+   APPROACH — calm editorial columns (no colour fills, no motion)
+   ========================================================================== */
+.fz1-appr { display: grid; gap: clamp(28px, 3vw, 44px) clamp(26px, 3vw, 48px); grid-template-columns: 1fr; }
+@media (min-width: 640px) { .fz1-appr { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .fz1-appr { grid-template-columns: repeat(4, 1fr); } }
+.fz1-appr__cell { border-top: 2px solid var(--navy); padding-top: 22px; }
+.fz1-appr__n { display: block; font-family: var(--font-display); font-style: italic; font-size: 1.4rem; color: var(--blue); margin-bottom: 14px; }
+.fz1-appr__cell h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.24rem; margin: 0 0 10px; letter-spacing: -.01em; }
+.fz1-appr__cell p { margin: 0; color: var(--muted); font-size: .96rem; line-height: 1.55; }
+
+/* ==========================================================================
+   SCROLL REVEAL — neutralised (content always visible; calm, no entrance)
+   ========================================================================== */
+.fz1-reveal, .fz1-reveal.is-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fz1-map__pinring { display: none; }
+  .fz1 *, .fz1 *::before, .fz1 *::after { transition-duration: .12s !important; animation: none !important; }
+}
+
+/* ==========================================================================
+   4biz Properties — FOOTER  (Oxygen → Footer template; paste into Footer CSS)
+   Compact: brand + simple contact + legal. Navy-deep, scoped under .fz1f.
+   The serif heading uses the same font as the page (loaded via page.css).
+   ========================================================================== */
+
+.fz1f *, .fz1f *::before, .fz1f *::after { box-sizing: border-box; }
+
+.fz1f {
+  --navy-deep: #19222f;
+  --blue-tint: #aab4c5;
+  --white: #fff;
+  --on-dark-mut: rgba(255, 255, 255, .68);
+  --line: rgba(255, 255, 255, .14);
+  --font-display: "IBM Plex Serif", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --gutter: clamp(20px, 5vw, 64px);
+  --ease: cubic-bezier(.4, 0, .2, 1);
+
+  background: var(--navy-deep); color: #fff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+.fz1f a { color: inherit; text-decoration: none; }
+.fz1f img { display: block; max-width: 100%; height: auto; }
+.fz1f ul { list-style: none; margin: 0; padding: 0; }
+.fz1f :focus-visible { outline: 2px solid var(--blue-tint); outline-offset: 3px; }
+
+.fz1f__inner { max-width: 1240px; margin-inline: auto; padding: clamp(46px, 6vw, 72px) var(--gutter) 28px; }
+
+/* ---- Top bar: logo + phone/email + social icons (nothing more) ---- */
+.fz1f__top {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 18px 40px;
+  padding-bottom: clamp(20px, 2.6vw, 30px); border-bottom: 1px solid var(--line);
+}
+.fz1f__logo { flex: none; }
+.fz1f__logo img { height: 40px; width: auto; display: block; filter: brightness(0) invert(1); }
+.fz1f__contact { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-left: auto; }
+.fz1f__contact a { font-size: .96rem; font-weight: 300; color: rgba(255,255,255,.92); position: relative; padding-bottom: 2px; transition: color .25s var(--ease); }
+.fz1f__contact a::after { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease); }
+.fz1f__contact a:hover::after { transform: scaleX(1); }
+.fz1f__socials { display: flex; align-items: center; gap: 14px; }
+.fz1f__socials a { display: grid; place-items: center; width: 26px; height: 26px; color: rgba(255,255,255,.78); transition: color .25s var(--ease); }
+.fz1f__socials a svg { width: 19px; height: 19px; fill: currentColor; }
+.fz1f__socials a:hover { color: #fff; }
+
+/* ---- Bottom bar: legal ---- */
+.fz1f__bottom {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px;
+  padding-top: 22px;
+}
+.fz1f__copy { margin: 0; font-size: .85rem; color: var(--on-dark-mut); }
+.fz1f__legal { display: flex; flex-wrap: wrap; gap: 18px; }
+.fz1f__legal a { font-size: .85rem; color: var(--on-dark-mut); transition: color .25s var(--ease); }
+.fz1f__legal a:hover { color: #fff; }
+.fz1f__toplink { margin-left: auto; font-size: .85rem; font-weight: 400; color: rgba(255,255,255,.82); transition: color .25s var(--ease); }
+.fz1f__toplink:hover { color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fz1f *, .fz1f *::before, .fz1f *::after { transition-duration: .12s !important; }
+}
+
+
+
+/* ==========================================================================
+   4biz Properties — SHARED SUB-PAGE COMPONENTS
+   Appended to the page <style>. Scoped under .fz1, reuses the home tokens.
+   (page hero, breadcrumb, service categories, property cards, job layout, form)
+   ========================================================================== */
+
+/* ---- Sub-page hero: SPLIT — text on a solid navy panel, image beside it (never text over image) ---- */
+.fz1-phero { position: relative; background: var(--navy-deep); color: #fff; display: grid; grid-template-columns: 1fr; overflow: hidden; }
+.fz1-phero__media { position: relative; min-height: clamp(220px, 40vw, 360px); }
+.fz1-phero__media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.fz1-phero__scrim { display: none; }
+.fz1-phero__inner { background: var(--navy-deep); display: flex; flex-direction: column; justify-content: center; padding-top: clamp(30px, 5vw, 48px); padding-bottom: clamp(40px, 6vw, 60px); }
+@media (min-width: 900px) {
+  .fz1-phero { grid-template-columns: 1.04fr .96fr; align-items: stretch; }
+  .fz1-phero__media { grid-column: 2; grid-row: 1; min-height: min(72vh, 600px); }
+  .fz1-phero__inner { grid-column: 1; grid-row: 1; padding-top: clamp(124px, 17vh, 188px); padding-bottom: clamp(72px, 10vw, 116px); }
+}
+.fz1-phero .fz1-eyebrow { color: var(--blue-tint); }
+.fz1-phero__title { font-family: var(--font-display); font-weight: 600; font-size: clamp(2rem, 1.1rem + 3.2vw, 3.5rem); line-height: 1.04; letter-spacing: 0; margin: 0 0 18px; max-width: 20ch; text-wrap: balance; }
+.fz1-phero__title .fz1-hero__title-dim { color: rgba(255,255,255,.6); }
+.fz1-phero__lead { font-size: clamp(1.02rem, .97rem + .4vw, 1.22rem); color: rgba(255,255,255,.85); margin: 0; max-width: 56ch; letter-spacing: -.011em; }
+.fz1-phero__cta { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; }
+
+/* job hero meta chips */
+.fz1-phero__facts { display: flex; flex-wrap: wrap; gap: 10px 12px; margin-top: 24px; }
+.fz1-fact { display: inline-flex; align-items: center; gap: .6em; padding: 7px 14px; border: 1px solid rgba(255,255,255,.26); border-radius: 999px; font-size: .86rem; font-weight: 500; color: #fff; }
+.fz1-fact b { font-weight: 600; color: var(--blue-tint); font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; }
+
+/* ---- Breadcrumb ---- */
+.fz1-crumb { display: flex; flex-wrap: wrap; gap: 6px 9px; align-items: center; font-size: .8rem; color: var(--muted); margin-bottom: 16px; }
+.fz1-crumb a { color: var(--muted); transition: color .2s var(--ease); }
+.fz1-crumb a:hover { color: var(--navy); }
+.fz1-crumb b { color: var(--navy); font-weight: 600; }
+.fz1-crumb .sep { opacity: .5; }
+.fz1-phero .fz1-crumb, .fz1-phero .fz1-crumb a { color: rgba(255,255,255,.72); }
+.fz1-phero .fz1-crumb b { color: #fff; }
+.fz1-phero .fz1-crumb a:hover { color: #fff; }
+
+/* ---- Service category block ---- */
+.fz1-cat { border-top: 2px solid var(--navy); padding-top: clamp(22px, 3vw, 32px); display: grid; gap: clamp(20px, 3vw, 40px); grid-template-columns: 1fr; margin-bottom: clamp(40px, 5vw, 68px); }
+.fz1-cat:last-child { margin-bottom: 0; }
+@media (min-width: 920px) { .fz1-cat { grid-template-columns: minmax(260px, .82fr) 1.18fr; gap: clamp(36px, 4vw, 64px); } }
+.fz1-cat__n { display: block; font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 1.5rem; color: var(--blue); margin-bottom: 12px; }
+.fz1-cat__name { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.5rem, 1.1rem + 1.5vw, 2.05rem); line-height: 1.12; letter-spacing: -.01em; margin: 0 0 14px; color: var(--navy); }
+.fz1-cat__desc { color: var(--muted); font-size: 1rem; line-height: 1.6; margin: 0 0 18px; max-width: 42ch; }
+.fz1-cat__subs { display: grid; gap: clamp(14px, 1.6vw, 20px); grid-template-columns: 1fr; }
+@media (min-width: 560px) { .fz1-cat__subs { grid-template-columns: 1fr 1fr; } }
+
+/* sub-service card */
+.fz1 a.fz1-subcard { display: flex; flex-direction: column; padding: clamp(18px, 1.8vw, 24px); border: 1px solid var(--line); border-radius: var(--radius); background: #fff; transition: border-color .25s var(--ease), transform .35s var(--ease), box-shadow .35s var(--ease); color: var(--navy); }
+.fz1-subcard:hover { border-color: var(--blue-tint); transform: translateY(-2px); box-shadow: 0 18px 36px -28px rgba(36,48,72,.5); }
+.fz1-subcard__h { font-family: var(--font-display); font-weight: 600; font-size: 1.16rem; letter-spacing: -.01em; margin: 0 0 8px; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.fz1-subcard__h::after { content: "\2192"; color: var(--blue); font-size: 1.05em; transition: transform .3s var(--ease); }
+.fz1-subcard:hover .fz1-subcard__h::after { transform: translateX(4px); }
+.fz1-subcard__d { color: var(--muted); font-size: .92rem; line-height: 1.5; margin: 0 0 14px; }
+.fz1-subcard__d:last-child { margin-bottom: 0; }
+
+/* service chips (lists of leaf services) */
+.fz1-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; }
+.fz1-chips li { list-style: none; }
+.fz1-chips li { font-size: .84rem; color: var(--ink); padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--grey-soft); }
+.fz1-chips--light li { background: rgba(255,255,255,.06); border-color: var(--on-dark-line); color: rgba(255,255,255,.9); }
+
+/* two-column service detail list */
+.fz1-svclist { display: grid; gap: clamp(28px, 3.5vw, 48px); grid-template-columns: 1fr; }
+@media (min-width: 820px) { .fz1-svclist { grid-template-columns: 1fr 1fr; } }
+.fz1-svccol__h { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.3rem, 1.05rem + .8vw, 1.7rem); letter-spacing: -.01em; margin: 0 0 8px; color: var(--navy); }
+.fz1-svccol__d { color: var(--muted); margin: 0 0 18px; font-size: .98rem; line-height: 1.6; }
+.fz1-svccol ul { margin: 0; padding: 0; }
+.fz1-svccol li { list-style: none; border-top: 1px solid var(--line); padding: 11px 0 11px 22px; position: relative; font-size: .98rem; color: var(--ink); }
+.fz1-svccol li::before { content: ""; position: absolute; left: 0; top: 18px; width: 10px; height: var(--stroke-line); background: var(--blue); }
+
+/* ---- Property cards ---- */
+.fz1-pcards { display: grid; gap: clamp(22px, 3vw, 36px); grid-template-columns: 1fr; }
+@media (min-width: 760px) { .fz1-pcards { grid-template-columns: 1fr 1fr; } }
+.fz1 a.fz1-pcard { display: flex; flex-direction: column; color: var(--navy); }
+.fz1-pcard__media { position: relative; overflow: hidden; border-radius: var(--radius); aspect-ratio: 16 / 10; background: var(--grey-soft); margin-bottom: 18px; }
+.fz1-pcard__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .9s var(--ease); }
+.fz1-pcard:hover .fz1-pcard__media img { transform: scale(1.05); }
+.fz1-pcard__go { position: absolute; right: 0; bottom: 0; width: 44px; height: 44px; background: var(--navy); color: #fff; display: grid; place-items: center; font-size: 1.05rem; transition: background .25s var(--ease); }
+.fz1-pcard:hover .fz1-pcard__go { background: var(--blue); }
+.fz1-pcard__h { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.3rem, 1.1rem + .7vw, 1.6rem); letter-spacing: -.01em; margin: 0 0 8px; transition: color .25s var(--ease); }
+.fz1-pcard:hover .fz1-pcard__h { color: var(--blue); }
+.fz1-pcard__d { color: var(--muted); font-size: .96rem; line-height: 1.55; margin: 0; }
+
+/* property listings (compact) */
+.fz1-listings { display: grid; gap: clamp(22px, 3vw, 34px); grid-template-columns: 1fr; }
+@media (min-width: 680px) { .fz1-listings { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .fz1-listings { grid-template-columns: repeat(3, 1fr); } }
+.fz1 a.fz1-listing { display: flex; flex-direction: column; color: var(--navy); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #fff; transition: border-color .25s var(--ease), transform .35s var(--ease), box-shadow .35s var(--ease); }
+.fz1-listing:hover { border-color: var(--blue-tint); transform: translateY(-2px); box-shadow: 0 20px 40px -30px rgba(36,48,72,.5); }
+.fz1-listing__media { position: relative; aspect-ratio: 16 / 11; overflow: hidden; background: var(--grey-soft); }
+.fz1-listing__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.fz1-listing:hover .fz1-listing__media img { transform: scale(1.05); }
+.fz1-listing__tag { position: absolute; left: 12px; top: 12px; font-size: .68rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #fff; background: rgba(25,34,47,.86); padding: 6px 10px; border-radius: 2px; }
+.fz1-listing__body { padding: clamp(16px, 1.8vw, 22px); display: flex; flex-direction: column; gap: 6px; }
+.fz1-listing__h { font-family: var(--font-display); font-weight: 600; font-size: 1.16rem; letter-spacing: -.01em; margin: 0; }
+.fz1-listing__loc { color: var(--muted); font-size: .9rem; }
+.fz1-listing__facts { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--line); font-size: .86rem; color: var(--ink); }
+.fz1-listing__facts b { font-weight: 600; }
+
+/* ---- CTA band ---- */
+.fz1-cta__inner { display: grid; gap: 24px; grid-template-columns: 1fr; align-items: center; }
+@media (min-width: 860px) { .fz1-cta__inner { grid-template-columns: 1.5fr auto; gap: 48px; } }
+.fz1-cta__inner .fz1-h2 { margin-bottom: .25em; }
+
+/* ---- Job page layout ---- */
+.fz1-job { display: grid; gap: clamp(34px, 4vw, 56px); grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 940px) { .fz1-job { grid-template-columns: 1fr minmax(280px, 340px); gap: clamp(44px, 5vw, 80px); } }
+.fz1-job__block { margin-bottom: clamp(30px, 4vw, 48px); }
+.fz1-job__block:last-child { margin-bottom: 0; }
+.fz1-job__block h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem); line-height: 1.15; letter-spacing: -.01em; color: var(--navy); margin: 0 0 16px; }
+.fz1-job__block p { color: var(--muted); font-size: 1.02rem; line-height: 1.7; margin: 0 0 1em; }
+.fz1-job__block p:last-child { margin-bottom: 0; }
+
+/* checklist */
+.fz1-ticks { margin: 0; padding: 0; display: grid; gap: 12px; }
+.fz1-ticks li { list-style: none; position: relative; padding-left: 34px; color: var(--ink); font-size: 1rem; line-height: 1.55; }
+.fz1-ticks li::before { content: ""; position: absolute; left: 0; top: 2px; width: 20px; height: 20px; border-radius: 50%; background: var(--navy); }
+.fz1-ticks li::after { content: ""; position: absolute; left: 6px; top: 8px; width: 8px; height: 4px; border-left: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(-45deg); }
+
+/* numbered process steps */
+.fz1-steps { margin: 0; padding: 0; counter-reset: st; display: grid; gap: 18px; }
+.fz1-steps li { list-style: none; position: relative; padding-left: 52px; min-height: 36px; color: var(--muted); font-size: .98rem; line-height: 1.55; }
+.fz1-steps li::before { counter-increment: st; content: counter(st, decimal-leading-zero); position: absolute; left: 0; top: -2px; font-family: var(--font-display); font-style: italic; font-size: 1.25rem; color: var(--blue); }
+.fz1-steps li b { display: block; font-family: var(--font-display); font-style: normal; font-weight: 600; color: var(--navy); font-size: 1.06rem; margin-bottom: 2px; }
+
+/* sticky apply card */
+.fz1-applycard { position: sticky; top: calc(var(--h, 70px) + 24px); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(22px, 2.4vw, 30px); background: var(--grey-soft); }
+.fz1-applycard h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; margin: 0 0 16px; color: var(--navy); }
+.fz1-applycard dl { margin: 0 0 22px; display: grid; gap: 12px; }
+.fz1-applycard dt { font-size: .7rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+.fz1-applycard dd { margin: 2px 0 0; font-size: .98rem; color: var(--navy); }
+.fz1-applycard .fz1-btn { width: 100%; justify-content: center; }
+
+/* ---- Application form ---- */
+.fz1-form { display: grid; gap: clamp(16px, 2vw, 22px); grid-template-columns: 1fr; max-width: 720px; }
+@media (min-width: 640px) { .fz1-form { grid-template-columns: 1fr 1fr; } }
+.fz1-field { display: flex; flex-direction: column; gap: 7px; }
+.fz1-field--full { grid-column: 1 / -1; }
+.fz1-field label { font-size: .8rem; font-weight: 600; letter-spacing: .04em; color: var(--navy); }
+.fz1-field label span { color: var(--blue); }
+.fz1-field input, .fz1-field textarea {
+  width: 100%; padding: 12px 14px; font: inherit; color: var(--navy);
+  background: #fff; border: 1px solid var(--line-strong); border-radius: var(--radius);
+  transition: border-color .25s var(--ease), box-shadow .25s var(--ease);
+}
+.fz1-field textarea { min-height: 130px; resize: vertical; }
+.fz1-field input:focus, .fz1-field textarea:focus { outline: 0; border-color: var(--navy); box-shadow: 0 0 0 3px rgba(36,48,72,.08); }
+.fz1-field input[type="file"] { padding: 10px 12px; background: var(--grey-soft); cursor: pointer; }
+.fz1-form__foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; }
+.fz1-form__note { font-size: .84rem; color: var(--muted); max-width: 44ch; }
+.fz1-form__ok { grid-column: 1 / -1; display: none; padding: 16px 18px; border-left: var(--stroke-line) solid var(--navy); background: var(--grey-soft); color: var(--navy); font-weight: 500; }
+.fz1-form.is-sent .fz1-form__ok { display: block; }
+
+
+
+/* ==========================================================================
+   SERVICE / SUB-SERVICE / LEAF page components (appended per page)
+   ========================================================================== */
+/* H3 subtitle in the hero (sits under the H1, styled like a lead) */
+.fz1-phero__sub { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.1rem, 1rem + .5vw, 1.42rem); line-height: 1.4; letter-spacing: -.01em; color: rgba(255,255,255,.9); margin: 0; max-width: 54ch; }
+
+/* generic section heading block */
+.fz1-block { margin-bottom: clamp(18px, 2.4vw, 30px); }
+.fz1-block .fz1-lead { margin-top: 14px; }
+
+/* two large entry cards (e.g. Reprezentare chiriași / Servicii pentru proprietari) */
+.fz1-duo { display: grid; gap: clamp(16px, 2vw, 24px); grid-template-columns: 1fr; }
+@media (min-width: 680px) { .fz1-duo { grid-template-columns: 1fr 1fr; } }
+.fz1 a.fz1-entry { display: flex; flex-direction: column; padding: clamp(24px, 2.6vw, 38px); border: 1px solid var(--line); border-radius: var(--radius); background: #fff; color: var(--navy); transition: border-color .25s var(--ease), transform .35s var(--ease), box-shadow .35s var(--ease); }
+.fz1-entry:hover { border-color: var(--blue-tint); transform: translateY(-2px); box-shadow: 0 22px 44px -30px rgba(36,48,72,.5); }
+.fz1-entry h3 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.3rem, 1.1rem + .7vw, 1.66rem); letter-spacing: -.01em; margin: 0 0 12px; }
+.fz1-entry p { color: var(--muted); margin: 0 0 20px; line-height: 1.6; }
+.fz1-entry .fz1-link { margin-top: auto; }
+
+/* expertise grid (sub-service "Domenii de expertiză": 13 cards -> leaves) */
+.fz1-xgrid { display: grid; gap: clamp(14px, 1.6vw, 20px); grid-template-columns: 1fr; }
+@media (min-width: 600px) { .fz1-xgrid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 980px) { .fz1-xgrid { grid-template-columns: 1fr 1fr 1fr; } }
+.fz1 a.fz1-xcard { display: flex; flex-direction: column; padding: clamp(18px, 1.8vw, 24px) clamp(16px, 1.4vw, 20px); border-top: 2px solid var(--navy); color: var(--navy); transition: background .25s var(--ease), padding-left .3s var(--ease); }
+.fz1-xcard:hover { background: rgba(36,48,72,.035); padding-left: clamp(22px, 1.4vw, 28px); }
+.fz1-xcard h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.16rem; line-height: 1.22; letter-spacing: -.01em; margin: 0 0 8px; }
+.fz1-xcard p { color: var(--muted); font-size: .92rem; line-height: 1.5; margin: 0 0 14px; }
+.fz1-xcard .fz1-link { margin-top: auto; font-size: .88rem; }
+
+/* two-column list block (e.g. Cui se adresează? / situations) */
+.fz1-cols2 { columns: 2; column-gap: clamp(28px, 4vw, 56px); }
+@media (max-width: 620px) { .fz1-cols2 { columns: 1; } }
+.fz1-cols2 .fz1-ticks { display: block; }
+.fz1-cols2 .fz1-ticks li { break-inside: avoid; margin-bottom: 12px; }
+
+/* segment cards reuse .fz1-pcards / .fz1-pcard (already defined) */
+
+</style>
+</head>
+<body>
+<!--
+  ============================================================================
+  4biz Properties — HEADER  (Oxygen: paste into the Header template Code Block)
+  ----------------------------------------------------------------------------
+  • No <html>/<head>/<body>. Styles live in header.css. JS inline at the bottom.
+  • Self-contained (re-declares brand tokens), scoped under .fz1h.
+  • No decorative icons (CBRE-style). Only functional dropdown carets remain.
+  • Transparent over the dark hero (.fz1-hero) → solid on scroll. On pages
+    WITHOUT a dark hero the JS keeps it solid so it is always visible.
+  • Set real URLs for submenu links, Cariere, Despre noi, Contact and EN.
+  ============================================================================
+-->
+
+<header class="fz1h" id="fz1-header" data-fz1h>
+  <div class="fz1h__bar">
+
+    <a class="fz1h__logo" href="/" aria-label="4Biz Properties, Acasă">
+      <img class="fz1h__logo-light" src="/wp-content/uploads/2026/06/logo-4biz-transparent.png" alt="4Biz Properties" decoding="async">
+      <img class="fz1h__logo-dark" src="/wp-content/uploads/2026/06/logo-4biz-transparent.png" alt="4Biz Properties" decoding="async" aria-hidden="true">
+    </a>
+
+    <nav class="fz1h__nav" aria-label="Meniu principal">
+      <ul class="fz1h__menu">
+
+        <li class="fz1h__has-mega" data-mega>
+          <a href="/servicii" aria-haspopup="true" aria-expanded="false">Servicii <svg class="fz1h__chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="fz1h__mega">
+            <div class="fz1h__mega-inner">
+              <div class="fz1h__mega-intro">
+                <span class="fz1h__mega-eyebrow">Servicii</span>
+                <p class="fz1h__mega-lead">Consultanță imobiliară comercială, de la ocupare și investiții până la dezvoltare și management de active.</p>
+                <a class="fz1h__mega-more" href="/servicii">Vezi toate serviciile</a>
+              </div>
+              <div class="fz1h__mega-grid">
+                <div class="fz1h__mega-col">
+                  <a class="fz1h__mega-cat" href="/servicii/inchiriere-si-ocupare-spatii">Închiriere &amp; ocupare</a>
+                  <p class="fz1h__mega-desc">Ocupare și leasing, pentru chiriași și proprietari.</p>
+                  <a href="/servicii/reprezentare-chiriasi">Reprezentare chiriași</a>
+                  <a href="/servicii/servicii-pentru-proprietari">Servicii pentru proprietari</a>
+                </div>
+                <div class="fz1h__mega-col">
+                  <a class="fz1h__mega-cat" href="/servicii/consultanta-imobiliara-corporate">Consultanță corporate</a>
+                  <p class="fz1h__mega-desc">Strategie imobiliară pentru companii și portofolii.</p>
+                  <a href="/servicii/consultanta-imobiliara-corporate">Strategie &amp; ocupare</a>
+                  <a href="/servicii/consultanta-imobiliara-corporate">Portofolii &amp; sedii multiple</a>
+                </div>
+                <div class="fz1h__mega-col">
+                  <a class="fz1h__mega-cat" href="/servicii/investitii-si-tranzactii-imobiliare">Investiții &amp; tranzacții</a>
+                  <p class="fz1h__mega-desc">Investiții, achiziții și vânzări de active.</p>
+                  <a href="/servicii/consultanta-investitionala">Consultanță investițională</a>
+                  <a href="/servicii/achizitii-active-imobiliare">Achiziții de active</a>
+                  <a href="/servicii/vanzari-active-imobiliare">Vânzări de active</a>
+                </div>
+                <div class="fz1h__mega-col">
+                  <a class="fz1h__mega-cat" href="/servicii/achizitie-si-dezvoltare">Achiziție &amp; dezvoltare</a>
+                  <p class="fz1h__mega-desc">Terenuri, dezvoltări și consultanță pre-lease / pre-sale.</p>
+                  <a href="/servicii/terenuri-pentru-dezvoltare">Terenuri pentru dezvoltare</a>
+                  <a href="/servicii/consultanta-pentru-dezvoltatori">Consultanță dezvoltatori</a>
+                  <a href="/servicii/consultanta-pre-lease">Consultanță pre-lease</a>
+                  <a href="/servicii/consultanta-pre-sale">Consultanță pre-sale</a>
+                </div>
+                <div class="fz1h__mega-col">
+                  <a class="fz1h__mega-cat" href="/servicii/management-de-proprietati-si-portofolii">Management &amp; performanță</a>
+                  <p class="fz1h__mega-desc">Administrarea și optimizarea activelor.</p>
+                  <a href="/servicii/management-de-proprietati">Management de proprietăți</a>
+                  <a href="/servicii/management-de-portofolii">Management de portofolii</a>
+                  <a href="/servicii/performanta-activelor">Performanța activelor</a>
+                  <a href="/servicii/optimizarea-activelor">Optimizarea activelor</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="fz1h__has-mega" data-mega>
+          <a href="/proprietati" aria-haspopup="true" aria-expanded="false">Proprietăți <svg class="fz1h__chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="fz1h__mega">
+            <div class="fz1h__mega-inner">
+              <div class="fz1h__mega-intro">
+                <span class="fz1h__mega-eyebrow">Proprietăți</span>
+                <p class="fz1h__mega-lead">Active definite prin poziționare, utilizare și potențial. Oportunități on &amp; off-market, la nivel național.</p>
+                <a class="fz1h__mega-more" href="/proprietati">Vezi toate proprietățile</a>
+              </div>
+              <div class="fz1h__mega-props">
+                <a href="/proprietati/birouri"><strong>Birouri</strong><span>Spații premium pentru companii internaționale și afaceri locale mari.</span></a>
+                <a href="/proprietati/industrial-si-logistica"><strong>Industrial &amp; Logistică</strong><span>Accesibilitate, eficiență și scalabilitate.</span></a>
+                <a href="/proprietati/retail"><strong>Retail</strong><span>Poziționare corectă față de fluxurile de consumatori.</span></a>
+                <a href="/proprietati/terenuri"><strong>Terenuri</strong><span>Valoare determinată de potențialul de dezvoltare.</span></a>
+                <a href="/proprietati/proprietati-cu-destinatie-speciala"><strong>Active cu destinație specială</strong><span>Componentă operațională puternică, valoare specifică.</span></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li><a href="/noutati">Noutăți</a></li>
+        <li><a href="/cariere">Cariere</a></li>
+        <li><a href="/despre-noi">Despre noi</a></li>
+      </ul>
+    </nav>
+
+    <div class="fz1h__actions">
+      <a class="fz1h__lang" href="#" hreflang="en" aria-label="Switch to English version">EN</a>
+      <a class="fz1h-btn fz1h__cta" href="/contact">Contact</a>
+      <button class="fz1h__burger" type="button" data-fz1h-burger aria-label="Deschide meniul" aria-expanded="false" aria-controls="fz1h-mobile">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===================== MOBILE MENU ===================== -->
+  <div class="fz1h__mobile" id="fz1h-mobile" data-fz1h-mobile aria-hidden="true">
+    <nav aria-label="Meniu mobil">
+      <ul class="fz1h__mmenu">
+
+        <li class="fz1h__has-sub">
+          <div class="fz1h__mrow">
+            <a class="fz1h__mlink" href="/servicii">Servicii</a>
+            <button class="fz1h__msub-toggle" type="button" data-fz1h-sub aria-expanded="false" aria-controls="msub-servicii" aria-label="Deschide submeniul Servicii"><span class="fz1h__msub-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          </div>
+          <div class="fz1h__msub" id="msub-servicii"><div>
+            <a href="/servicii/inchiriere-si-ocupare-spatii">Închiriere și ocupare spații</a>
+            <a href="/servicii/consultanta-imobiliara-corporate">Consultanță imobiliară corporate</a>
+            <a href="/servicii/investitii-si-tranzactii-imobiliare">Investiții și tranzacții imobiliare</a>
+            <a href="/servicii/achizitie-si-dezvoltare">Achiziție și dezvoltare</a>
+            <a href="/servicii/management-de-proprietati-si-portofolii">Management de proprietăți și portofolii</a>
+          </div></div>
+        </li>
+
+        <li class="fz1h__has-sub">
+          <div class="fz1h__mrow">
+            <a class="fz1h__mlink" href="/proprietati">Proprietăți</a>
+            <button class="fz1h__msub-toggle" type="button" data-fz1h-sub aria-expanded="false" aria-controls="msub-prop" aria-label="Deschide submeniul Proprietăți"><span class="fz1h__msub-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          </div>
+          <div class="fz1h__msub" id="msub-prop"><div>
+            <a href="/proprietati/birouri">Birouri</a>
+            <a href="/proprietati/industrial-si-logistica">Industrial &amp; Logistică</a>
+            <a href="/proprietati/retail">Retail</a>
+            <a href="/proprietati/terenuri">Terenuri</a>
+            <a href="/proprietati/proprietati-cu-destinatie-speciala">Active cu destinație specială</a>
+          </div></div>
+        </li>
+
+        <li><div class="fz1h__mrow"><a href="/noutati">Noutăți</a></div></li>
+        <li><div class="fz1h__mrow"><a href="/cariere">Cariere</a></div></li>
+        <li><div class="fz1h__mrow"><a href="/despre-noi">Despre noi</a></div></li>
+        <li><div class="fz1h__mrow"><a href="/contact">Contact</a></div></li>
+      </ul>
+    </nav>
+    <div class="fz1h__mfoot">
+      <a class="fz1h__lang" href="#" hreflang="en" aria-label="Switch to English version">EN</a>
+      <span class="fz1h__mfoot-contact"><a href="mailto:contact@4biz.properties">contact@4biz.properties</a></span>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    "use strict";
+    var header = document.getElementById("fz1-header") || document.querySelector("[data-fz1h]");
+    if (!header || header.dataset.fz1hInit) return;
+    header.dataset.fz1hInit = "1";
+    var burger = header.querySelector("[data-fz1h-burger]");
+    var mobile = header.querySelector("[data-fz1h-mobile]");
+    var each = function (l, fn) { Array.prototype.forEach.call(l, fn); };
+
+    /* Overlay only when the page has a dark hero; otherwise stay solid so the
+       header is visible on light pages. The page content can parse AFTER this
+       header script, so detect the hero once the DOM is ready. */
+    var overlay = false;
+    function onScroll() { if (overlay) header.classList.toggle("is-solid", window.pageYOffset > 30); }
+    function detectHero() {
+      overlay = !!document.querySelector(".fz1-hero");
+      if (!overlay) header.classList.add("is-solid"); else onScroll();
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", detectHero);
+    else detectHero();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    /* ---- Desktop mega menus ---- */
+    var megas = header.querySelectorAll("[data-mega]");
+    var megaTimer;
+    function closeMega() { each(megas, function (x) { x.classList.remove("is-open"); var a = x.querySelector("a[aria-haspopup]"); if (a) a.setAttribute("aria-expanded", "false"); }); header.classList.remove("is-mega-open"); }
+    function openMega(li) {
+      clearTimeout(megaTimer);
+      each(megas, function (x) { if (x !== li) { x.classList.remove("is-open"); var b = x.querySelector("a[aria-haspopup]"); if (b) b.setAttribute("aria-expanded", "false"); } });
+      li.classList.add("is-open");
+      var a = li.querySelector("a[aria-haspopup]"); if (a) a.setAttribute("aria-expanded", "true");
+      header.classList.add("is-mega-open");
+    }
+    function scheduleClose() { clearTimeout(megaTimer); megaTimer = setTimeout(closeMega, 150); }
+    each(megas, function (li) {
+      li.addEventListener("mouseenter", function () { openMega(li); });
+      li.addEventListener("mouseleave", scheduleClose);
+      li.addEventListener("focusin", function () { openMega(li); });
+      li.addEventListener("focusout", function (e) { if (!li.contains(e.relatedTarget)) scheduleClose(); });
+    });
+
+    /* ---- Mobile submenu accordions (only one open at a time) ---- */
+    each(header.querySelectorAll("[data-fz1h-sub]"), function (btn) {
+      btn.addEventListener("click", function () {
+        var li = btn.closest(".fz1h__has-sub");
+        var willOpen = !li.classList.contains("is-sub-open");
+        each(header.querySelectorAll(".fz1h__has-sub"), function (other) {
+          if (other !== li) {
+            other.classList.remove("is-sub-open");
+            var ob = other.querySelector("[data-fz1h-sub]");
+            if (ob) ob.setAttribute("aria-expanded", "false");
+          }
+        });
+        li.classList.toggle("is-sub-open", willOpen);
+        btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
+      });
+    });
+
+    /* ---- Mobile menu open / close ---- */
+    function setMenu(open) {
+      if (open) {
+        var sbw = window.innerWidth - document.documentElement.clientWidth;
+        var pad = sbw > 0 ? sbw + "px" : "";
+        document.body.style.paddingRight = pad;
+        /* NOTE: do NOT put paddingRight on the header — it shifts the bar to the
+           left, which then exposes a grey scrollbar-gutter strip on the right
+           (the bar background ::before is `100vw` centred on the bar, so it
+           moves with it). The body-lock alone is enough to prevent the layout
+           shift behind the menu. */
+        if (mobile) mobile.style.paddingRight = pad ? "calc(" + pad + " + var(--gutter))" : "";
+      } else {
+        document.body.style.paddingRight = "";
+        if (mobile) mobile.style.paddingRight = "";
+      }
+      header.classList.toggle("is-menu-open", open);
+      if (burger) { burger.setAttribute("aria-expanded", open ? "true" : "false"); burger.setAttribute("aria-label", open ? "Închide meniul" : "Deschide meniul"); }
+      if (mobile) mobile.setAttribute("aria-hidden", open ? "false" : "true");
+      document.body.classList.toggle("fz1h-lock", open);
+    }
+    if (burger) burger.addEventListener("click", function () { setMenu(!header.classList.contains("is-menu-open")); });
+    if (mobile) each(mobile.querySelectorAll("a"), function (a) { a.addEventListener("click", function () { setMenu(false); }); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      if (header.classList.contains("is-menu-open")) setMenu(false);
+      else if (header.classList.contains("is-mega-open")) closeMega();
+    });
+    window.addEventListener("resize", function () { if (window.innerWidth >= 992 && header.classList.contains("is-menu-open")) setMenu(false); });
+  })();
+  </script>
+</header>
+
+<!--
+  ============================================================================
+  4biz Properties — HOME PAGE  (Oxygen Builder: paste into a Code Block)
+  ----------------------------------------------------------------------------
+  • No <html>/<head>/<body> — Oxygen/WordPress already provides those.
+  • Styles live in page.css (Oxygen → Page CSS).  Minimal JS at the bottom.
+  • Editorial: serif display font (IBM Plex Serif), no icons,
+    restrained motion. Images use LIVE WordPress URLs — swap in your own.
+  ============================================================================
+-->
+
+<main class="fz1" id="fz1-l4-analiza-costurilor-de-ocupare">
+<section class="fz1-phero" id="fz1-hero-top" aria-labelledby="ph-title">
+  <div class="fz1-phero__media"><img src="/work/wp-content/uploads/2026/03/office-buldings-commercial-real-estate-romania-4biz-properties-1.webp" srcset="/work/wp-content/uploads/2026/03/office-buldings-commercial-real-estate-romania-4biz-properties-1-768x512.webp 768w, /work/wp-content/uploads/2026/03/office-buldings-commercial-real-estate-romania-4biz-properties-1-1024x683.webp 1024w, /work/wp-content/uploads/2026/03/office-buldings-commercial-real-estate-romania-4biz-properties-1.webp 1536w" sizes="100vw" width="1536" height="1024" fetchpriority="high" decoding="async" alt="Analiza costurilor de ocupare — consultanță imobiliară comercială, 4Biz Properties."></div>
+  <div class="fz1-phero__scrim" aria-hidden="true"></div>
+  <div class="fz1-container fz1-phero__inner">
+    <p class="fz1-eyebrow">Reprezentare Chiriași</p>
+    <h1 class="fz1-phero__title" id="ph-title">Analiza costurilor de ocupare</h1>
+    <h3 class="fz1-phero__sub">Evaluăm costul total de ocupare al fiecărei opțiuni și comparăm alternativele disponibile pe baze omogene, astfel încât decizia să se sprijine pe cifre reale, nu pe chiria afișată.</h3>
+    <div class="fz1-phero__cta"><a class="fz1-btn fz1-btn--light" href="/contact">Discută cu un consultant</a></div>
+  </div>
+</section>
+
+<section class="fz1-section fz1-section--tight" aria-label="Introducere">
+  <div class="fz1-container">
+    <p class="fz1-statement" style="max-width:62ch">Chiria de bază spune doar o parte din poveste. <span class="fz1-lead-soft">Costul real al unui spațiu rezultă din mentenanță, utilități, amenajare, perioade de grație și clauzele de indexare — iar analiza costurilor de ocupare, parte din serviciul de <a href="/servicii/reprezentare-chiriasi">Reprezentare Chiriași</a>, le aduce pe toate într-o singură cifră comparabilă.</span></p>
+  </div>
+</section>
+
+<section class="fz1-section fz1-section--soft fz1-defer" aria-labelledby="s-presupune">
+  <div class="fz1-container">
+    <div class="fz1-rich">
+      <div><h2 class="fz1-h2" id="s-presupune">Ce presupune</h2></div>
+      <div>
+        <p class="fz1-lead" style="max-width:62ch">Construim un model de cost total de ocupare pe întreaga durată a contractului, exprimat în euro pe metru pătrat pe an, care include chiria de bază, costurile de mentenanță, contribuția la amenajare, perioadele de grație și efectul indexării anuale. Aducem ofertele la o bază comună de comparație — aceeași suprafață utilă, aceeași durată, același nivel de finisaj — pentru ca diferențele dintre clădiri să devină vizibile. Evidențiem costurile ascunse, de la factorul de adăugare al spațiilor comune până la cheltuielile de operare neplafonate, și cuantificăm impactul fiecărei concesii negociate asupra cifrei finale. Rezultatul este o comparație clară, pe care echipa dumneavoastră o poate prezenta direct în fața conducerii.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fz1-section fz1-defer" aria-labelledby="s-situatii">
+  <div class="fz1-container">
+    <div class="fz1-rich">
+      <div>
+        <h2 class="fz1-h2" id="s-situatii">Situații frecvente</h2>
+        <p class="fz1-lead" style="margin-top:14px">Analiza este utilă mai ales atunci când o decizie de spațiu trebuie justificată cu cifre solide.</p>
+      </div>
+      <div class="fz1-cols2">
+        <ul class="fz1-ticks">
+          <li>Comparați oferte din clădiri cu structuri de cost și factori de adăugare diferiți.</li>
+          <li>Cântăriți relocarea într-un spațiu nou față de renegocierea contractului actual.</li>
+          <li>Evaluați impactul perioadelor de grație și al contribuției la amenajare asupra costului net.</li>
+          <li>Pregătiți un caz de business pentru aprobarea conducerii sau a grupului.</li>
+          <li>Anticipați efectul indexării anuale asupra bugetului pe toată durata contractului.</li>
+          <li>Bugetați costul total de ocupare pentru o extindere sau o consolidare de spații.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fz1-section fz1-section--dark fz1-defer" aria-labelledby="s-cta">
+  <div class="fz1-container fz1-cta__inner">
+    <div>
+      <p class="fz1-eyebrow">Pasul următor</p>
+      <h2 class="fz1-h2" id="s-cta">Vreți să știți cât costă, de fapt, fiecare opțiune?</h2>
+      <p class="fz1-lead">Construim împreună comparația costurilor de ocupare pentru spațiile pe care le evaluați. Acest serviciu face parte din <a href="/servicii/reprezentare-chiriasi">Reprezentare Chiriași</a>.</p>
+    </div>
+    <div><a class="fz1-btn fz1-btn--light" href="/contact">Discută cu un consultant</a></div>
+  </div>
+</section>
+</main>
+
+
+<!--
+  ============================================================================
+  4biz Properties — FOOTER  (Oxygen: paste into the Footer template Code Block)
+  ----------------------------------------------------------------------------
+  • No <html>/<head>/<body>. Styles live in footer.css. JS inline at bottom.
+  • Self-contained (re-declares brand tokens), scoped under .fz1f.
+  • Compact: brand + simple contact + legal. No nav menu, no WhatsApp button.
+  • Set real URLs for legal pages and social profiles.
+  ============================================================================
+-->
+
+<footer class="fz1f" id="fz1-footer" data-fz1f>
+  <div class="fz1f__inner">
+
+    <div class="fz1f__top">
+      <a class="fz1f__logo" href="/" aria-label="4Biz Properties, Acasă">
+        <img src="/wp-content/uploads/2026/06/logo-4biz-transparent.png" alt="4Biz Properties" height="30" decoding="async">
+      </a>
+      <div class="fz1f__contact">
+        <a href="tel:+40215554249">+40 21 555 4249</a>
+        <a href="mailto:contact@4biz.properties">contact@4biz.properties</a>
+        <div class="fz1f__socials">
+          <a href="https://www.linkedin.com/company/4biz-properties/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <a href="https://www.facebook.com/4biz.properties/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.instagram.com/4biz.properties/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.06 1.8.26 2.23.43.56.21.96.47 1.38.9.43.42.69.82.9 1.38.17.43.37 1.06.43 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.06 1.17-.26 1.8-.43 2.23-.21.56-.47.96-.9 1.38-.42.43-.82.69-1.38.9-.43.17-1.06.37-2.23.43-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.06-1.8-.26-2.23-.43-.56-.21-.96-.47-1.38-.9-.43-.42-.69-.82-.9-1.38-.17-.43-.37-1.06-.43-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.06-1.17.26-1.8.43-2.23.21-.56.47-.96.9-1.38.42-.43.82-.69 1.38-.9.43-.17 1.06-.37 2.23-.43C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56-.79.31-1.46.72-2.12 1.38C1.36 2.67.95 3.34.63 4.14c-.3.76-.5 1.63-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.31.79.72 1.46 1.38 2.12.66.66 1.33 1.07 2.12 1.38.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.12-1.38.66-.66 1.07-1.33 1.38-2.12.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.38-2.12-.66-.66-1.33-1.07-2.12-1.38-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-10.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fz1f__bottom">
+      <p class="fz1f__copy">© <span data-fz1f-year>2026</span> 4Biz Properties. Toate drepturile rezervate.</p>
+      <ul class="fz1f__legal">
+        <li><a href="/confidentialitate">Confidențialitate</a></li>
+        <li><a href="/cookies">Cookies</a></li>
+        <li><a href="/termeni-si-conditii">Termeni și condiții</a></li>
+      </ul>
+      <a class="fz1f__toplink" href="#fz1-hero-top" data-fz1f-top>Înapoi sus ↑</a>
+    </div>
+
+  </div>
+
+  <script>
+  (function () {
+    "use strict";
+    var f = document.getElementById("fz1-footer") || document.querySelector("[data-fz1f]");
+    if (!f || f.dataset.fz1fInit) return;
+    f.dataset.fz1fInit = "1";
+    var y = f.querySelector("[data-fz1f-year]");
+    if (y) { try { y.textContent = new Date().getFullYear(); } catch (e) {} }
+    var top = f.querySelector("[data-fz1f-top]");
+    if (top) top.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  })();
+  </script>
+</footer>
+
+</body>
+</html>
