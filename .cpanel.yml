@@ -2,10 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/bizprope/public_html/
-    - /bin/rsync -av
-        --exclude='.git'
-        --exclude='.gitignore'
-        --exclude='.cpanel.yml'
-        --exclude='.vercel'
-        --exclude='vercel.json'
-        ./ $DEPLOYPATH
+    - /bin/rsync -av --exclude=.git --exclude=.gitignore --exclude=.cpanel.yml --exclude=.vercel --exclude=vercel.json ./ $DEPLOYPATH
